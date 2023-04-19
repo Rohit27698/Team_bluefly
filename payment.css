@@ -1,0 +1,119 @@
+#container {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#left-side {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* #right-side {
+            width: 50%;
+            background-color: #fafafa;
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+/* } */
+
+.inpData {
+    display: block;
+    width: 500px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.inpData2 {
+    margin-top: -3px;
+    width: 244px;
+    height: 40px;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+#botLen {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnPay {
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    height: 60px;
+    width: 180px;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 421px) and (max-width: 720px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-side {
+        width: 100%;
+    }
+
+    #lfd {
+        width: 100%;
+    }
+
+    #right-side {
+        width: 100%;
+    }
+
+    #button {
+        width: 120px;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 420px) {
+
+    /* #head{
+                display: flex;
+                flex-direction: column;
+            } */
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-side {
+        width: 100%;
+    }
+
+    #right-side {
+        width: 100%;
+    }
+
+    #button {
+        width: 90px;
+        height: 30px;
+    }
+
+    /* #tabBorder{
+                border-spacing: 10px;
+                border-radius: 15px;
+            } */
+}
