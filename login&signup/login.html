@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bluefly</title>
     <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="FootercartPopup.css" />
     <link rel="stylesheet" href="footer.css" />
-    <style>
-      body {
-    background-color: white;
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color:rgb(255, 255, 255);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -17,44 +22,68 @@
   
   .container {
     background-color: white;
-    
-    margin: 0 auto;
+    margin: 20px auto;
     max-width: 500px;
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
   }
   
   h1 {
     margin-top: 0;
   }
   
-  label {
+  form {
     display: grid;
-    margin-bottom: 10px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  label {
     text-align: left;
   }
   
-  input {
+  input[type="email"],
+  input[type="password"] {
     border: 1px solid #ddd;
     border-radius: 3px;
     font-size: 16px;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
-    margin-bottom: 30px;
   }
+  
   
   button {
     background-color: black;
     border: none;
-    color: white;
-    padding: 10px 225px;
+    color: rgb(249, 246, 246);
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin-top: 10px;
     cursor: pointer;
+  }
+  .password-field {
+    position:relative;
+  }
+  
+  .forgot-password {
+    position: absolute;
+    top: -80%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #999;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    color: #333;
+  }
+  p{
+    /* color: #fff; */
+    font-style: normal;
   }
   body{
     padding: 0px;
@@ -78,9 +107,7 @@
     width: 100%;
     animation: blackslide 3s linear infinite;
  }
-  
-    </style>
-
+</style>
   </head>
   <body>
     <header>
@@ -94,7 +121,7 @@
           </a>
         </div>
         <div>
-          <img src="ser.png"  />
+          <img src="ser.png"/>
           
          <a href="login.html"><img src="user.png" alt="" /></a> 
 
@@ -317,6 +344,7 @@
           </li>
         
           <li>
+            <!-- <a href="womensPage.html" class="shoes"> -->
                <a href="womensPage.html">WOMEN
                 <div class="shoes1">
                   <div>
@@ -386,6 +414,7 @@
               </a> 
              
           <li>
+            <!-- <a href="" class="shoes" -->
                <a href="mensPage.html">
                 MEN
                 <div class="shoes1">
@@ -717,65 +746,64 @@
       <p>FREE SHIPPING On Order Over $99</p>
     </div>
 
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1>CREATE ACCOUNT</h1>
-      <form>
-        <label for="firstname">FIRST NAME</label>
-        <input type="text" id="firstname" name="firstname" required>
-        <label for="lastname">LAST NAME</label>
-        <input type="text" id="lastname" name="lastname" required>
-        <label for="email">EMAIL</label>
-        <input type="email" id="email" name="email" required>
-        <label for="password">PASSWORD</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">CREATE</button>
-      </form>
-    </div>
+  
 
-    <script src="script.js"></script>
-  </body>
-  <script>
-    const signupForm = document.querySelector("form");
+
+
+
+
+<body>
+  <div class="container">
+    <h1>LOGIN</h1>
+    <form>
+      <label for="email">EMAIL</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">PASSWORD</label>
+      <div class="password-field">
+        <input type="password" id="password" name="password" required>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+
+      <button type="submit">SIGN IN</button>
+      <button type="submit"><a href="signup.html" style="color: aliceblue;"> CREATE </a></button>
+
+    </form>
+  </div>
+</body>
+<script>
+ 
+ document.querySelector("form").addEventListener("submit",login)
+
+    var loginArr=JSON.parse(localStorage.getItem("account-data"))||[];
+  
     
-    signupForm.addEventListener("submit", function (event) {
+    function login(event){
       event.preventDefault();
-  
-      const firstnameInput = this.elements.firstname;
-      const lastnameInput = this.elements.lastname;
-      const emailInput = this.elements.email;
-      const passwordInput = this.elements.password;
-  
-      let accounts = JSON.parse(localStorage.getItem("account-data")) || [];
-  
-      if (accounts.find((account) => account.email === emailInput.value)) {
-        alert("Email already registered!");
-        return;
-      }
-  
-      const newAccount = {
-        firstname: firstnameInput.value,
-        lastname: lastnameInput.value,
-        email: emailInput.value,
-        password: passwordInput.value,
-      };
-  
-      accounts.push(newAccount);
-  
-      localStorage.setItem("account-data", JSON.stringify(accounts));
-  
-      alert("Account created successfully!");
-  
-      firstnameInput.value = "";
-      lastnameInput.value = "";
-      emailInput.value = "";
-      passwordInput.value = "";
-      
-      window.location.href = "login.html";
-    });
-  </script>
+      var email=document.querySelector("#email").value
+      var password=document.querySelector("#password").value
+       
+        if(loginArr.length>0){
+            for(i=0;i<loginArr.length;i++){
+            console.log(loginArr[i].email,email,loginArr[i].password,password)
+            if(loginArr[i].email==email && loginArr[i].password==password){
+                alert("Login Successfully Done");
+                window.location.href="index.html"
+                break;
+            }else{
+                if((loginArr.length-1)==i){
+                    alert("check email and password correct or Wrong else goto REGISTER");
+                }
+            }
+        }
+        }else{
+            alert("check email and password correct or Wrong else goto REGISTER");
+        }
+
+    }
+ </script>
+
+<!-- -------------------------Footer---------------------- -->
 <footer>
   <div>
     <p>ABOUT US</p>
@@ -806,10 +834,6 @@
       />
       <input type="submit" value="Subscribe" />
     </form>
-    <div>
-      <img src="images/instagram.svg" alt="" />
-      <img src="images/facebook.svg" alt="" />
-    </div>
   </div>
 </footer>
 <div>
@@ -822,7 +846,6 @@
     RESERVED.
   </p>
 </div>
-
 </body>
 </html>
 <script>
@@ -840,4 +863,3 @@ function subscribe(event) {
  
 }
 </script>
-
