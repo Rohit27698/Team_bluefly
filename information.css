@@ -1,0 +1,248 @@
+#container {
+    display: flex;
+    width: 100%;
+    height: vh;
+}
+
+#left-side {
+    width: 100%;
+    /* border: 1px solid red; */
+    background-color: white;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+}
+
+#left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #right-side {
+            width: 50%;
+            /* border: 1px solid green; */
+/* background-color: #fafafa; */
+/* } */
+
+h2,
+h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.2857142857em;
+    line-height: 1.3em;
+    font-weight: 350;
+}
+
+h2 h4 {
+    margin-top: 5px;
+}
+
+h4 {
+    font-size: small;
+    display: inline;
+}
+
+form select {
+    display: block;
+    margin: 10px;
+}
+
+.fullWidth {
+    display: block;
+    width: 98.4%;
+    height: 40px;
+}
+
+#country {
+    display: block;
+    margin-left: -0px;
+    /* width: 540px; */
+    /* margin-right: 50px; */
+    padding-right: 50px;
+}
+
+form {
+    gap: 10px;
+}
+
+#state {
+    display: inline;
+}
+
+#name input {
+    width: 50%;
+    height: 40px;
+}
+
+#name {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#check-box {
+    width: 18px;
+    height: 18px;
+}
+
+#bottomGap {
+    margin-bottom: 10px;
+}
+
+.incLen {
+    height: 40px;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+#botLen {
+    display: flex;
+    justify-content: space-between;
+}
+
+#button {
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    height: 60px;
+    width: 180px;
+    border-radius: 5px;
+}
+
+#cheKmail {
+    margin-top: 10px;
+    margin-right: -0px;
+}
+
+
+/* cart page css */
+
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Style the main content area */
+main {
+    padding: 20px;
+}
+
+/* Style the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style the table footer */
+table tfoot tr:first-child {
+    font-weight: bold;
+}
+
+/* Style the checkout button */
+a {
+    /* background-color: #333; */
+    color: black;
+    display: block;
+    /* margin-top: 20px; */
+    /* padding: 10px; */
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+}
+
+a:hover {
+    background-color: #666;
+}
+
+
+@media only screen and (min-width: 421px) and (max-width: 720px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-side {
+        width: 100%;
+    }
+
+    #right-side {
+        width: 100%;
+    }
+
+    #button {
+        width: 120px;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 420px) {
+    #head {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-side {
+        width: 100%;
+    }
+
+    #right-side {
+        width: 100%;
+    }
+
+    #button {
+        width: 90px;
+        height: 30px;
+    }
+
+    #btnPay {
+        padding: -5px;
+        /* margin: 55px; */
+    }
+}
