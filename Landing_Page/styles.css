@@ -9,20 +9,25 @@ body{
 
 
 #head1 > :first-child{
-    margin-left: 35%;
+    display: block;
+    text-align: center;
+    margin-left: 30%;
     width: 35%;
     
 }
+#head1 > :first-child > img{
+    
+    height: 40px;
+}
 #head1 > :nth-child(2){
-    font-size: 30px;
-    font-size: 30px;
+    font-size: 25px;
     opacity: 0.5;
     font-weight: 100; 
-    gap: 10px;
+   
     display: flex;
-    gap: 20px;
+    margin-left: 15%;
     margin-top: 10px;
-    margin-left: 5%;
+   gap: 20px;
 }
 
 #head2 > :first-child{
@@ -47,10 +52,30 @@ body{
 #head2 > :nth-child(3){
     height: 50%;
 }
-#head2 > :nth-child(3) >img{
+#head2 > :nth-child(3) > div >img{
     width: 100%;
     height: 580px;
 }
+.slideIt{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+button{
+    height: 30px;
+}
+.container{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+  }
 #head3 > h2{
     text-align: center;
 }
@@ -58,6 +83,8 @@ body{
     display: grid;
     grid-template-columns: repeat(5,1fr);
 }
+
+
 #head3 > div >div >img, #head6 > :nth-child(2) > div > div > img , #head7 > :nth-child(2) > div > div > img{
     width: 100%;
 }
@@ -116,5 +143,74 @@ body{
     grid-template-columns: repeat(5,1fr);
     gap: 5%;
     margin: 10px 2%;
+}
+
+#head8{
+    background-color:rgb(230,230,230);
+    height: 390px;
+}
+#head8 > :first-child{
+    display: flex;
+    column-gap: 10%;
+    margin-left: 5%;
+}
+#head8 > .col2{
+    margin-top: 30px;
+}
+#head8 > :last-child{
+    text-align: center;
+    font-size: small;
+}
+.fb{
+    margin-left: 10px;
+}
+.bflogo{
+    margin-left: 42%;
+}
+
+
+/* media query section starts from here */
+
+
+@media screen and (min-width:320px) and (max-width:768px){
+    #head1 > :first-child{
+        margin-left: 30%;
+        width: 10%;
+    }
+    #head1 > :first-child > img{
+        margin-top: 5px;
+        height: 30px;
+    }
+    #head1 > :nth-child(2){
+        font-size: 20px;
+        margin-left: 30%;
+       gap: 10px;
+    }
+
+    #head2 > :nth-child(3) > div >img{
+        height: 400px;
+    }
+    #head5 > div >img{
+        height: 350px;
+     }
+     #head3 > :nth-child(3) > div >img{
+        width: 100%;
+        height: 300px;
+    }
+    #head2 > :first-child{
+        margin: 10px 2%;
+        opacity: 0.8;
+        font-size: 10px;
+    }
+    #head3 > div{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #head4 > #head4_boxes{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #head6 > :nth-child(2), #head7 > :nth-child(2){
+        grid-template-columns: repeat(3,1fr);
+    }
+
 }
 
