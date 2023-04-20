@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoes items</title>
+    <link rel="stylesheet" href="shoes.css">
+    <link rel="stylesheet" href="footer.css">
+    
+    <style>
+        
+    </style>
+</head>
+<body>
+   
+ <!--below code is for left part (sorting)-->
+    <p>WELCOME TO BLUEFLY : Luxuary brands at discounted Price</p>
+    <div id="parent">
+        
+        <div id="left-div">
+            
+            <div class="container">
+                
+                <div class="conthead">
+                    
+                    <div class="headright">
+                        <select>
+                            <option>Price low to high</option>
+                            <option>Price high to low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="left">
+                        <div class="h">
+                            <h3>CATEGORY</h3>
+                            <input type="checkbox" /><label>Boots - Ankle</label><br>
+                            <input type="checkbox" /><label>Boots - Booties</label><br>
+                            <input type="checkbox" /><label>Boots - Knee-High</label><br>
+                            <input type="checkbox" /><label>Boots - Ober the Knee</label><br>
+                            <input type="checkbox" /><label>Espadrilles</label><br>
+                            <input type="checkbox" /><label>Flats</label><br>
+                            <input type="checkbox" /><label>Mules & Sliders</label><br>
+                            <input type="checkbox" /><label>Pumps & Heels</label><br>
+                            <hr>
+                        </div>
+                        <div class="h">
+                            <h3>BRAND</h3>
+                            <input type="checkbox" /><label>Alexander McQueen</label><br>
+                            <input type="checkbox" /><label>Antonio Maurizi</label><br>
+                            <input type="checkbox" /><label>Aquatalia</label><br>
+                            <input type="checkbox" /><label>Balenciaga</label><br>
+                            <input type="checkbox" /><label>Bottega Veneta</label><br>
+                            <input type="checkbox" /><label>Burberry</label><br>
+                            <input type="checkbox" /><label>Chanel</label><br>
+                            <input type="checkbox" /><label>Chloe</label><br>
+                            <hr>
+                        </div>
+                        <div class="h">
+                            <h3>SHOE SIZE</h3>
+                            <input type="checkbox" /><label>3</label><br>
+                            <input type="checkbox" /><label>4</label><br>
+                            <input type="checkbox" /><label>4.5</label><br>
+                            <input type="checkbox" /><label>5</label><br>
+                            <input type="checkbox" /><label>5.5</label><br>
+                            <input type="checkbox" /><label>6</label><br>
+                            <input type="checkbox" /><label>6.5</label><br>
+                            <input type="checkbox" /><label>7</label><br>
+                            <hr>
+                        </div>
+                        <div class="h">
+                            <h3>HEEL - HEIGHT</h3>
+                            <input type="checkbox" /><label>Flat Heel</label><br>
+                            <input type="checkbox" /><label>High Heel </label><br>
+                            <input type="checkbox" /><label>Low Heel</label><br>
+                            <input type="checkbox" /><label>Medium Heel</label><br>
+                            <input type="checkbox" /><label>Medium Heel (2" - 3")</label><br>
+                            <input type="checkbox" /><label>Ultra High Heel</label><br>
+                            <input type="checkbox" /><label>Ultra High Heel (4" +)</label><br>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+
+    <!--below is used for img,name,price -->
+        <div>
+            <div >
+                <h1>WOMEN'S SHOES</h1>
+                <p>30 Products</p>
+            </div>
+            <div id="right-div"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!--footer section below-->
+    <footer>
+        <div>
+          <p>ABOUT US</p>
+          <div>
+            <div>
+              <p>Contact Us</p>
+              <p>Frequently Asked Questions</p>
+              <p>Shipping & Returns</p>
+              <p>Pre-Owned Guide</p>
+            </div>
+            <div>
+              <p>Sell on Bluefly</p>
+              <p>Privacy Policy</p>
+              <p>Terms & Conditions</p>
+              <p>Do not sell my personal information</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>SIGN UP AND SAVE</p>
+          <p>Subscribe to get exclusive offers on designer brands</p>
+          <form>
+            <input type="email" name="email" id="email" placeholder="Enter email"/>
+            <input type="submit" value="Subscribe" />
+          </form>
+          <div>
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
+
+<script>
+    var shoesData= [
+   
+    {
+        id : 1,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/64585938_026_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Shoe The Bear Rebel Lug Boots",
+        price:"$136",
+        mrp : "$120",
+    },
+    {
+        id : 2,
+        image_url:"https://images.urbndata.com/is/image/Anthropologie/66265901_034_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Nisolo Ama Woven Mules",
+        price:"$180",
+        mrp : "$140",
+    },
+    {
+        id : 3,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/67172148_045_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Nisolo All-Day Clogs",
+        price:"$160",
+        mrp : "$140",
+    },
+    {
+        id : 4,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/65219214_001_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Silent D Hunter Western Clogs",
+        price:"$140",
+        mrp : "$120",
+    },
+    {
+        id : 5,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/64191091_224_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Marc Fisher Square-Toe Heeled Mules",
+        price:"$105",
+        mrp : "$100",
+    },
+    {
+        id : 6,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/66266362_060_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Jeffrey Campbell Woven Mules",
+        price:"$200",
+        mrp : "$180",
+    },
+    {
+        id : 7,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/65220758_066_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Marc Fisher Puffy Sandals",
+        price:"$150",
+        mrp : "$140",
+    },
+    {
+        id : 8,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/65586471_014_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Mystique Embellished Slide Sandals",
+        price:"$120",
+        mrp : "$115",
+    },
+    {
+        id : 9,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/67753715_052_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Swedish Hasbeens Viola Clog Boots",
+        price:"$450",
+        mrp : "$400",
+    },
+    {
+        id : 10,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/65386773_014_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Silent D Jayman Lace-Up Heels",
+        price:"$200",
+        mrp : "$185",
+    },
+    {
+        id : 11,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/66045576_015_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Plush Faux Fur Slippers",
+        price:"$28",
+        mrp : "$25",
+    },
+    {
+        id : 12,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/66057159_007_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Charles David Reveal Mules",
+        price:"$99",
+        mrp : "$95",
+    },
+    {
+        id : 13,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/66057365_068_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Charles David Embellished Ankle-Strap Heels",
+        price:"$99",
+        mrp : "$95",
+    },
+    {
+        id : 14,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/64209752_072_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Schutz Camurca Heeled Sandals",
+        price:"$108",
+        mrp : "$105",
+    },
+    {
+        id : 15,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/66398892_001_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Matisse Floral Platform Mules",
+        price:"$50",
+        mrp : "$48",
+    },
+    {
+        id : 16,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/63372387_001_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Matisse Caty Western Boots",
+        price:"$200",
+        mrp : "$180",
+    },
+    {
+        id : 17,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/57064404_002_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Veja Campo Leather Sneakers",
+        price:"$145",
+        mrp : "$140",
+    },
+    {
+        id : 18,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/65222085_001_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Silent D Gideota Suede Mules",
+        price:"$140",
+        mrp : "$130",
+    },
+    {
+        id : 19,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/61399259_025_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"On Cloud Monochrome Running Sneakers",
+        price:"$130",
+        mrp : "$125",
+    },
+    {
+        id : 20,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/65127771_072_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Vicenza Puffy Heeled Sandals",
+        price:"$160",
+        mrp : "$155",
+    },
+    {
+        id : 21,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/65128530_012_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Vicenza Braided Platform Heels",
+        price:"$175",
+        mrp : "$170",
+    },
+    {
+        id : 22,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/65572687_055_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Alohas South Heeled Boots",
+        price:"$225",
+        mrp : "$215",
+    },
+    {
+        id : 23,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/65825747_071_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Seychelles Breath Of Fresh Air Puffy Sandals",
+        price:"$69",
+        mrp : "$65",
+    },
+    {
+        id : 24,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/62159975_065_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Veja Rio Branco Sneakers",
+        price:"$140",
+        mrp : "$135",
+    },
+    {
+        id : 25,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/63652846_025_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Seychelles Hometown Heeled Ankle Boots",
+        price:"$159",
+        mrp : "$150",
+    },
+    {
+        id : 26,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/59485425_036_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Veja Condor Sneakers",
+        price:"$160",
+        mrp : "$150",
+    },
+    {
+        id : 27,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/66265901_034_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Jeffrey Campbell Landen Sandals",
+        price:"$155",
+        mrp : "$150",
+    },
+    {
+        id : 28,
+        image_url:
+            "https://images.urbndata.com/is/image/Anthropologie/63982177_038_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+        name:"Bombas Jacquard Grip Slippers",
+        price:"$40",
+        mrp : "$38",
+    },
+]
+
+
+shoesData.map(function(elem){
+    
+    var div = document.createElement("div");
+
+        var image = document.createElement("img");
+        image.setAttribute("src", elem.image_url)
+        image.setAttribute("alt", elem.name)
+        image.addEventListener("click", function(){
+            imgfun(elem);
+        });
+
+        var name = document.createElement("h4");
+        name.textContent = elem.name;
+        name.addEventListener("click", function(){
+            namefun(elem);
+        });
+
+        var pricebox = document.createElement("div");
+
+        var price = document.createElement("p");
+        price.textContent = elem.price;
+
+        var mrp = document.createElement("p");
+        mrp.textContent = elem.mrp;
+
+        pricebox.append(price, mrp);
+
+        div.append(image,name,pricebox);
+        document.getElementById("right-div").append(div);
+
+});
+
+function imgfun(data){
+    
+    var storeArr = JSON.parse(localStorage.getItem("img-data")) || [];
+    
+    console.log(data);
+
+    storeArr.push(data);
+
+    localStorage.setItem("img-data", JSON.stringify(storeArr));
+}
+
+function namefun(data){
+    var storeArr = JSON.parse(localStorage.getItem("img-data")) || [];
+    console.log(data);
+
+    storeArr.push(data);
+
+    localStorage.setItem("img-data", JSON.stringify(storeArr));
+}
+
+
+</script>
