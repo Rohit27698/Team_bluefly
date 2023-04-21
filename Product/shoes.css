@@ -55,12 +55,14 @@ div > img {
     margin-left: 20px;
     padding-bottom: -20px;
 }
-#right-div > div > p:first-child {
+#right-div > div > div > p:first-child {
     text-decoration: line-through;
 }
 div > p:nth-child(2){
     font-size: medium;
 }
+
+
 
 
 

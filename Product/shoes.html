@@ -25,9 +25,10 @@
                 <div class="conthead">
                     
                     <div class="headright">
-                        <select>
-                            <option>Price low to high</option>
-                            <option>Price high to low</option>
+                        <select id="sorting" onchange="handleprice()">
+                            <option value="">Sort by Price</option>
+                            <option value="htl">High to Low</option>
+                            <option value="lth">Low to High</option>
                         </select>
                     </div>
                 </div>
@@ -362,22 +363,22 @@
 ]
 
 
-shoesData.map(function(elem){
+display(shoesData);
+
+function display(shoesData){
+    document.querySelector("#right-div").textContent = "";
+    shoesData.map(function(elem,index){
     
-    var div = document.createElement("div");
+        var div = document.createElement("div");
+        
 
         var image = document.createElement("img");
         image.setAttribute("src", elem.image_url)
-        image.setAttribute("alt", elem.name)
-        image.addEventListener("click", function(){
-            imgfun(elem);
-        });
-
+        image.setAttribute("alt", elem.name);
+        
         var name = document.createElement("h4");
         name.textContent = elem.name;
-        name.addEventListener("click", function(){
-            namefun(elem);
-        });
+        
 
         var pricebox = document.createElement("div");
 
@@ -390,29 +391,41 @@ shoesData.map(function(elem){
         pricebox.append(price, mrp);
 
         div.append(image,name,pricebox);
+
+        div.addEventListener("click", function(){
+            addtodetailpage(elem);
+        });
+
+
         document.getElementById("right-div").append(div);
 
-});
-
-function imgfun(data){
-    
-    var storeArr = JSON.parse(localStorage.getItem("img-data")) || [];
-    
-    console.log(data);
-
-    storeArr.push(data);
-
-    localStorage.setItem("img-data", JSON.stringify(storeArr));
+    });
 }
 
-function namefun(data){
-    var storeArr = JSON.parse(localStorage.getItem("img-data")) || [];
-    console.log(data);
 
-    storeArr.push(data);
+function handleprice(){
+    var select = document.getElementById("sorting").value;
 
-    localStorage.setItem("img-data", JSON.stringify(storeArr));
+    if(select === 'htl'){
+        shoesData = shoesData.sort(function(a, b){
+            return b.price - a.price;
+        });
+        
+    }
+    if(select === 'lth'){
+        shoesData = shoesData.sort(function(a, b){
+            return a.price - b.price;
+        });
+    }
+    display(shoesData);
+    
 }
 
+
+function addtodetailpage(elem){
+    localStorage.setItem("product-detail", JSON.stringify(elem))
+
+    window.location.href = "productdetail.html";
+}
 
 </script>
