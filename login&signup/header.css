@@ -4,7 +4,6 @@
     font-family: Futura, sans-serif;;
 }
 header{
-    position: sticky;
     top: 0;
     width: 100%;
     background-color: #ffffff;
@@ -25,7 +24,6 @@ header{
 
 #logoheader>div+div{
     height: 3vh;
-    
     display: flex;
     gap: 20%;
    
@@ -55,17 +53,7 @@ header{
 #menuheader>ul>li>a{
     text-decoration: none;
     color: #322d2d;
-
-
-
 }
-/* #menuheader ul li{
-   transition: transform 0.5s ;
-  
-} */
-
-
-
 .shoes1{
     
     width: 100%;
@@ -103,8 +91,7 @@ header{
    font-style: underline;
   
 }
-a:hover .shoes1{
-  
+   a:hover .shoes1{
     display: flex;
     column-gap: 30px;
     justify-content: center;
@@ -140,14 +127,8 @@ a:hover .shoes1{
         width: 100%;
         display: flex;
         justify-content: left;
-        /* flex-wrap: wrap; */
-    
-    }
-    #menuheader>ul{
-        /* display: none; */
     }
     .logo{
-        /* margin-left: -90px; */
         width: 80%;
     }
     #search{
