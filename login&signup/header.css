@@ -1,10 +1,5 @@
- *{
-    padding: 0;
-    margin: 0;
-    font-family: Futura, sans-serif;;
-}
+
 header{
-    top: 0;
     width: 100%;
     background-color: #ffffff;
     padding: 20px 0px;
@@ -54,7 +49,7 @@ header{
     text-decoration: none;
     color: #322d2d;
 }
-.shoes1{
+.navcon{
     
     width: 100%;
     display: none;
@@ -74,15 +69,15 @@ header{
   
     box-sizing: border-box;
 }
-.shoes1>div>h2{
+.navcon>div>h2{
     font-size: 12px;
    
 }
-.shoes1>div>img{
+.navcon>div>img{
     width: 100%;
 }
 
-.shoes:hover .shoes1{
+.shoes:hover .navcon{
   
    display: flex;
    column-gap: 30px;
@@ -91,7 +86,8 @@ header{
    font-style: underline;
   
 }
-   a:hover .shoes1{
+   a:hover .navcon{
+    color: black;
     display: flex;
     column-gap: 30px;
     justify-content: center;
@@ -106,7 +102,7 @@ header{
         gap: 10px 10px;
         font-size: 10px;
     }
-    .shoes:hover .shoes1{
+    .shoes:hover .navcon{
   
         display: flex;
         column-gap: 10px;
@@ -127,9 +123,6 @@ header{
         width: 100%;
         display: flex;
         justify-content: left;
-    }
-    .logo{
-        width: 80%;
     }
     #search{
         display: none;

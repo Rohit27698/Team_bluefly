@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="footer.css" />
     <style>
+      #error{
+        color: red;
+      }
       body {
     background-color: white;
     font-family: Arial, sans-serif;
@@ -106,7 +109,7 @@
           <li>
             <a href="shoes.html" class="shoes"
               >SHOES
-              <div class="shoes1">
+              <div class="navcon">
                 <div>
                   <img
                     src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/women_shoes.jpg?v=1598516516"
@@ -181,7 +184,7 @@
           <li>
             <a href="handbagandacc.html" class="shoes"
               >HANDBAGS & ACCESSORIES
-              <div class="shoes1">
+              <div class="navcon">
                 <div>
                   <img
                     src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR-AgdsVv1HHSCCVClYV8dqFjbAPgID-Rk7vWCQ_1e_i6x6wW0M"
@@ -265,7 +268,7 @@
           <li>
             <a href="" class="shoes"
               >DESIGNERS
-              <div class="shoes1">
+              <div class="navcon">
                 <div>
                   <img
                     src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/handbag.jpg?v=1598514963"
@@ -316,7 +319,7 @@
         
           <li>
                <a href="womensPage.html">WOMEN
-                <div class="shoes1">
+                <div class="navcon">
                   <div>
                     <img
                       src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/women.jpg?v=1598516476"
@@ -386,7 +389,7 @@
           <li>
                <a href="mensPage.html">
                 MEN
-                <div class="shoes1">
+                <div class="navcon">
                   <div>
                     <img
                       src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/men.jpg?v=1598516498"
@@ -456,7 +459,7 @@
           <li>
             <a href="sunglasses.html" class="shoes"
               >SUNGLASSES
-              <div class="shoes1">
+              <div class="navcon">
                 <div>
                   <img
                     src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/sunglasses_df9c0648-8d79-459a-ad8d-a7c1869f40db.jpg?v=1598516553"
@@ -518,7 +521,7 @@
           <li>
             <a href="watches.html" class="shoes"
               >WATCHES
-              <div class="shoes1">
+              <div class="navcon">
                 <div>
                   <img
                     src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/watch.jpg?v=1598517674"
@@ -586,7 +589,7 @@
           <li>
             <a href="under50.html" class="shoes"
               >UNDER $50
-              <div class="shoes1">
+              <div class="navcon">
                 <div>
                   <h2>SHOP BY PRIZE POINT</h2>
                   <p>Shop ALL</p>
@@ -629,7 +632,7 @@
           <li>
             <a href="" class="shoes"
               >BEAUTY
-              <div class="shoes1">
+              <div class="navcon">
                 <div>
                   <h2>FRAGRANCE</h2>
                   <p>Shop ALL</p>
@@ -648,7 +651,7 @@
           <li>
             <a href="" class="shoes"
             style="color: #ec7d7d;">CLEARANCE
-              <div class="shoes1">
+              <div class="navcon">
                 <div>
                   <img
                     src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/clearance_8fa5acf3-7405-41aa-8c98-b0891649c9ab.jpg?v=1598516564"
@@ -710,6 +713,7 @@
   <body>
     <div class="container">
       <h1>CREATE ACCOUNT</h1>
+      <ul id="error"></ul>
       <form>
         <label for="firstname">FIRST NAME</label>
         <input type="text" id="firstname" name="firstname" required>
@@ -718,7 +722,7 @@
         <label for="email">EMAIL</label>
         <input type="email" id="email" name="email" required>
         <label for="password">PASSWORD</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" minlength="5" required>
         <button type="submit">CREATE</button>
       </form>
     </div>
@@ -737,7 +741,7 @@
       let accounts = JSON.parse(localStorage.getItem("account-data")) || [];
   
       if (accounts.find((account) => account.email === emailInput.value)) {
-        alert("Email already registered!");
+         document.querySelector("#error").textContent=" * Email already registered!"
         return;
       }
   
@@ -751,8 +755,7 @@
       accounts.push(newAccount);
   
       localStorage.setItem("account-data", JSON.stringify(accounts));
-  
-      alert("Account created successfully!");
+      document.querySelector("#error").textContent="Account created successfully!"
   
       firstnameInput.value = "";
       lastnameInput.value = "";
