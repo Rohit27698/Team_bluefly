@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUEFLY Womens Cloths</title>
+    <link rel="stylesheet" href="cloths.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <p>WELCOME TO BLUEFLY : Luxuary brands at discounted Price</p>
+    <div id="parent">
+        
+        <div id="left-div">
+            
+            <div class="container">
+                
+                <div class="conthead">
+                    
+                    <div class="headright">
+                        <select id="sorting" onchange="handleprice()">
+                            <option value="">Sort by Price</option>
+                            <option value="htl">High to Low</option>
+                            <option value="lth">Low to High</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="left">
+                        <div class="h">
+                            <h3>SIZE</h3>
+                            <input type="checkbox" /><label> S</label><br>
+                            <input type="checkbox" /><label> M</label><br>
+                            <input type="checkbox" /><label> L</label><br>
+                            <input type="checkbox" /><label> XL</label><br>
+                            <input type="checkbox" /><label> XXL</label><br>
+                            <hr>
+                        </div>
+                        <div class="h">
+                            <h3>BRAND</h3>
+                            <input type="checkbox" /><label>Alexander McQueen</label><br>
+                            <input type="checkbox" /><label>Antonio Maurizi</label><br>
+                            <input type="checkbox" /><label>Aquatalia</label><br>
+                            <input type="checkbox" /><label>Balenciaga</label><br>
+                            <input type="checkbox" /><label>Bottega Veneta</label><br>
+                            <input type="checkbox" /><label>Burberry</label><br>
+                            <input type="checkbox" /><label>Chanel</label><br>
+                            <input type="checkbox" /><label>Chloe</label><br>
+                            <hr>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--cloths section (image, name, price)-->
+        <div>
+            <div >
+                <h1>WOMEN'S CLOTHS</h1>
+                <p>15 PRODUCTS</p> 
+            </div>
+            <div id="right-div"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!--Footer section below-->
+    <footer>
+        <div>
+          <p>ABOUT US</p>
+          <div>
+            <div>
+              <p>Contact Us</p>
+              <p>Frequently Asked Questions</p>
+              <p>Shipping & Returns</p>
+              <p>Pre-Owned Guide</p>
+            </div>
+            <div>
+              <p>Sell on Bluefly</p>
+              <p>Privacy Policy</p>
+              <p>Terms & Conditions</p>
+              <p>Do not sell my personal information</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>SIGN UP AND SAVE</p>
+          <p>Subscribe to get exclusive offers on designer brands</p>
+          <form>
+            <input type="email" name="email" id="email" placeholder="Enter email"/>
+            <input type="submit" value="Subscribe" />
+          </form>
+          <div>
+            <p><i class="fa fa-instagram"></i> <span> </span> <i class="fa fa-facebook"></i></p>
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>
+<script>
+    var cloths = [
+        {
+            id: 1,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2444730_360x.jpg?v=1674685124",
+            name : "CHECK BROWN AND BLECK LINE WOMEN CLOTHS",
+            price: "$714",
+            mrp : "$690"
+        },
+        {
+            id : 2,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1411495599_RLLZ_2_1080x.jpg?v=1681340731",
+            name : "COLERD PINK AND WHITE LINE CLOTHS",
+            price: "$249",
+            mrp : "$230"
+        },
+        {
+            id: 3,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1452115332_RLLZ_2_1080x.jpg?v=1676437954",
+            name : "COLORED PRINTED WOMEN COLTHS",
+            price: "$249",
+            mrp : "$230"
+        },
+        {
+            id: 4,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2358268_180x.jpg?v=1674685176",
+            name : "womens orange color long top",
+            price: "$1992",
+            mrp : "$1900"
+        },
+        {
+            id : 5,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2357109_180x.jpg?v=1674685077",
+            name : "Womens black color long top",
+            price: "$332",
+            mrp : "$300"
+        },
+        {
+            id: 6,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2359956_180x.jpg?v=1674685080",
+            name : "white color long top",
+            price: "$332",
+            mrp : "$300"
+        },
+        {
+            id: 7,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2335174_180x.jpg?v=1674684980",
+            name : "pink color long top",
+            price: "$332",
+            mrp : "$300"
+        },
+        {
+            id: 8,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2349536_180x.jpg?v=1674684948",
+            name : "black long denim",
+            price: "$1284",
+            mrp : "$1200"
+        },
+        {
+            id: 9,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1896026_180x.jpg?v=1649702441",
+            name : "black color long for women",
+            price: "$1404",
+            mrp : "$1370"
+        },
+        {
+            id: 10,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1937086_1080x.jpg?v=1649701980",
+            name : "Black balzer for women",
+            price: "$2075",
+            mrp : "$2000"
+        },
+        {
+            id: 11,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1914633_180x.jpg?v=1636498758",
+            name : "Slety long gaun ",
+            price: "$1620",
+            mrp : "$1600"
+        },
+        {
+            id: 12,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/280328_180x.jpg?v=1681343522",
+            name : "brown printed long top",
+            price: "$1200",
+            mrp : "$1100"
+        },
+        {
+            id: 13,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2332589_180x.jpg?v=1674685203",
+            name : "black long top",
+            price: "$632",
+            mrp : "$600"
+        },
+        {
+            id: 14,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2372679_180x.jpg?v=1674685168",
+            name : "blue denim long",
+            price: "$740",
+            mrp : "$700"
+        },
+        {
+            id: 15,
+            image_url: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2341382_180x.jpg?v=1674491280",
+            name : "Black long gaun",
+            price: "$954",
+            mrp : "$900"
+        },
+    ]
+
+
+
+    display(cloths);
+
+function display(cloths){
+    document.querySelector("#right-div").textContent = "";
+    cloths.map(function(elem,index){
+    
+        var div = document.createElement("div");
+        
+
+        var image = document.createElement("img");
+        image.setAttribute("src", elem.image_url)
+        image.setAttribute("alt", elem.name);
+        
+        var name = document.createElement("h4");
+        name.textContent = elem.name;
+        
+
+        var pricebox = document.createElement("div");
+
+        var price = document.createElement("p");
+        price.textContent = elem.price;
+
+        var mrp = document.createElement("p");
+        mrp.textContent = elem.mrp;
+
+        pricebox.append(price, mrp);
+
+        div.append(image,name,pricebox);
+
+        div.addEventListener("click", function(){
+            addtodetailpage(elem);
+        });
+
+
+        document.getElementById("right-div").append(div);
+
+    });
+}
+
+
+
+    
+
+function handleprice(){
+    var select = document.getElementById("sorting").value;
+
+    if(select === 'htl'){
+        shoesData = shoesData.sort(function(a, b){
+            return b.price - a.price;
+        });
+        
+    }
+    if(select === 'lth'){
+        shoesData = shoesData.sort(function(a, b){
+            return a.price - b.price;
+        });
+    }
+    display(shoesData);
+    
+}
+
+
+function addtodetailpage(elem){
+    localStorage.setItem("product-detail", JSON.stringify(elem))
+
+    window.location.href = "productdetail.html";
+}
+ 
+</script>

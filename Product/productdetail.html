@@ -202,7 +202,9 @@ function displayProducts(){
     name.textContent=product.name
 
     var priceBox = document.createElement("div")
+
         priceBox.setAttribute("class", "priceBox");
+
             var price = document.createElement("p")
             price.textContent =product.price
 
@@ -210,12 +212,10 @@ function displayProducts(){
             MRP.textContent = product.mrp;
             MRP.setAttribute("class", "MRP")
 
-            // var discount  = document.createElement("p")
-            // discount.textContent="Save" +product.discount
-            // discount.style.color = '#f66161';
+            
 
 
-          priceBox.append( MRP,price)
+          priceBox.append(price, MRP)
           document.getElementById("info").append(company,name,priceBox)
 
           var smimg = document.getElementById("smimg")
@@ -249,9 +249,14 @@ function displayProducts(){
 }
 
     var productsArr = JSON.parse(localStorage.getItem("carts")) || [];
+
     function addToCart(product){
-    productsArr.push(product)
-      localStorage.setItem("carts",JSON.stringify(productsArr))
+      productsArr.push(product)
+
+      localStorage.setItem("carts",JSON.stringify(productsArr));
+
+      
+
     }
 
 </script>

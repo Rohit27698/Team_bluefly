@@ -1,0 +1,71 @@
+body > p{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px 0 10px 0;
+    
+}
+
+#parent {
+    display: flex;
+    width: 100%;  
+    
+}
+
+
+#left-div{
+    width: 40%;   
+}
+
+.headright {
+    border: none;
+}
+
+.products {
+    display: flex;
+}
+
+.headleft{
+    
+    text-align: left;
+}
+
+#right-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 3%;
+}
+
+div > h4 {
+    margin: auto;
+
+}
+
+div > img {
+    width: 100%;
+    height: 50vh;    
+}
+
+#right-div > div > div {
+    display: flex;
+    gap: 30px;
+    margin-left: 20px;
+    padding-bottom: -20px;
+}
+
+#right-div > div > h4 {
+    font-family: futura, sans-serif;
+    font-size: 14px;
+} 
+
+#right-div >div > div> p:first-child {
+    text-decoration: line-through;
+}
+
+div > p:nth-child(2){
+    font-size: medium;
+}
+
+
+
