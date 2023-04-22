@@ -1,6 +1,9 @@
 #headerIcons img{
    height: 3vh;
+   margin-left: 20px;
+   
 }
+
 #menuheader{
     width: 100%;
     margin: auto;
@@ -78,11 +81,21 @@
   }
   
   .logo {
-    display: flex; /* remove default inline-block behavior */
+    display: flex; 
     justify-content: center;
-    margin: 0 auto; /* center the logo horizontally */
+    margin-left: 30%;
 
   }
+  #blackslider{
+    text-align: center;
+color: white;
+background-color: black;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 10px;
+}
   
 /* For screens smaller than 800px */
 @media screen and (max-width: 700px) {
