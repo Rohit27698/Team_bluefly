@@ -97,24 +97,27 @@
  }
 </style>
   </head>
-  <header>
-    <div id="logoheader">
-      <div>
+<body>
+  <header style="padding-top: 20px;">
+    <div style="display: flex; justify-content: center; justify-content: space-around;"  >
+      <div id="logoheader" >
+        <div>
+        </div>
         <a href="index.html">
           <img class="logo"
+          style="height: 5vh;"
           src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
           alt="bluefly"
         />
         </a>
-      </div>
-      <div>
-        <img src="ser.png"  />
-        
-       <a href="login.html"><img src="user.png" alt="" /></a> 
-
+      <div id="headerIcons">
+        <img src="ser.png" />
+        <a href="login.html"><img src="user.png" alt="" /></a>
         <a href="Payment.html"><img id="cartButton" src="bag.png" alt="" /></a>
       </div>
     </div>
+    </div>
+    
     <div id="menuheader">
       <ul>
         <li>
@@ -715,15 +718,13 @@
         </li>
       </ul>
     </div>
-  </header>
-  <body>
-    <div id="blackslider">
-      <p>WELCOME TO BLUEFLY : Luxury Brant at Dicount Price</p>
-      <p>FREE SHIPPING On Order Over $99</p>
-    </div>
-<body>
-  <div class="container">
-    <h1>LOGIN</h1>
+  </header> 
+  <div id="blackslider">
+    <p>WELCOME TO BLUEFLY : Luxury Brant at Dicount Price</p>
+    <p>FREE SHIPPING On Order Over $99</p>
+  </div>
+  <div class="container" >
+    <h1 style="margin-top: -8px; margin-bottom: 70px;">LOGIN</h1>
     <ul id="error"></ul>
     <form>
       <label for="email">EMAIL</label>
@@ -736,7 +737,7 @@
       </div>
 
       <button type="submit">SIGN IN</button>
-      <button class="CREATEb"> <a href="signup.html" style="color: aliceblue; text-decoration: none;">CREATE</a> </button>
+      <button class="CREATEb" style="background-color: white;"> <a href="signup.html" style="color: black; text-decoration: none;">Create account</a> </button>
     </form>
   </div>
 </body>

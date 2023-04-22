@@ -1,29 +1,4 @@
-
-header{
-    width: 100%;
-    background-color: #ffffff;
-    padding: 20px 0px;
-
-}
-#logoheader{
-    width: 100%;
-    display: flex;
-    height: 4vh;
-    justify-content: center;
-    align-items: center;
-    column-gap: 50%;
-    margin: auto;
-    
-   
-}
-
-#logoheader>div+div{
-    height: 3vh;
-    display: flex;
-    gap: 20%;
-   
-}
-#logoheader>div+div>a>img{
+#headerIcons img{
    height: 3vh;
 }
 #menuheader{
@@ -95,38 +70,27 @@ header{
     font-style: underline;
    
  }
-
-
-@media all and (max-width:750px) {
-    #menuheader>ul{
-        gap: 10px 10px;
-        font-size: 10px;
-    }
-    .shoes:hover .navcon{
+ #logoheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+  }
   
-        display: flex;
-        column-gap: 10px;
-        justify-content: center;
-        font-style: underline;
-        font-size: 10px;
-        line-height: 20px;
-        letter-spacing: 1px;
-     }
-     #logoheader>div+div{
-        height: 3vh;
-        display: flex;
-        justify-content: space-between;
-        gap: 5%;
-    }
-    #logoheader{
-        gap: 3px;
-        width: 100%;
-        display: flex;
-        justify-content: left;
-    }
-    #search{
-        display: none;
-    }
-}
+  .logo {
+    display: flex; /* remove default inline-block behavior */
+    justify-content: center;
+    margin: 0 auto; /* center the logo horizontally */
 
+  }
+/* For screens smaller than 800px */
+@media screen and (max-width: 700px) {
+    #menuheader {
+      display: none; 
+    }
+  }
+  
+  @media screen and (min-width: 501px) {
+  }
+  
 

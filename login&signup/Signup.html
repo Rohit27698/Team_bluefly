@@ -81,29 +81,29 @@
     width: 100%;
     animation: blackslide 3s linear infinite;
  }
-  
-    </style>
-
+  </style>
   </head>
   <body>
-    <header>
-      <div id="logoheader">
-        <div>
+    <header style="padding-top: 20px;">
+      <div style="display: flex; justify-content: center; justify-content: space-around;"  >
+        <div id="logoheader" >
+          <div>
+          </div>
           <a href="index.html">
             <img class="logo"
+            style="height: 5vh;"
             src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
             alt="bluefly"
           />
           </a>
-        </div>
-        <div>
-          <img src="ser.png"  />
-          
-         <a href="login.html"><img src="user.png" alt="" /></a> 
-
+        <div id="headerIcons">
+          <img src="ser.png" />
+          <a href="login.html"><img src="user.png" alt="" /></a>
           <a href="Payment.html"><img id="cartButton" src="bag.png" alt="" /></a>
         </div>
       </div>
+      </div>
+      
       <div id="menuheader">
         <ul>
           <li>
@@ -704,15 +704,15 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header> 
+  </head>
+  <body>
     <div id="blackslider">
       <p>WELCOME TO BLUEFLY : Luxury Brant at Dicount Price</p>
       <p>FREE SHIPPING On Order Over $99</p>
     </div>
-  </head>
-  <body>
     <div class="container">
-      <h1>CREATE ACCOUNT</h1>
+      <h1 style="margin-top: -50px; margin-bottom: 60px;">CREATE ACCOUNT</h1>
       <ul id="error"></ul>
       <form>
         <label for="firstname">FIRST NAME</label>
@@ -808,7 +808,6 @@
     RESERVED.
   </p>
 </div>
-</body>
 </html>
 <script>
 document.querySelector("form").addEventListener("submit", subscribe);
