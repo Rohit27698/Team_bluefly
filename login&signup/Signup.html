@@ -88,7 +88,23 @@
       <div style="display: flex; justify-content: center; justify-content: space-around;"  >
         <div id="logoheader" >
           <div>
+            <div id="slide">
+              <div class="slide-menu">
+                <a href="#" class="close-button">×</a>
+                <a href="#">CLOTHING</a>
+                <a href="#">SHOES</a>
+                <a href="#">HANDBAGS & ACCESSORIES</a>
+                <a href="#">DESIGNERS</a>
+                <a href="#">SUNGLASSES</a>
+                <a href="#">JEWLRY & WATCHES</a>
+                <a href="#">UNDER $50</a>
+                <a href="#">CLEARANCE</a>
+              </div>
+              <button class="open-button" onclick="hideButton()"><img src="menu.png" alt=""></button>
+        
+            </div>
           </div>
+         
           <a href="index.html">
             <img class="logo"
             style="height: 5vh;"
@@ -821,4 +837,30 @@ function subscribe(event) {
  document.querySelector("#emails").value = ""
  
 }
+</script>
+<script> 
+const openButton = document.querySelector('.open-button');
+const closeButton = document.querySelector('.close-button');
+const slideMenu = document.querySelector('.slide-menu');
+
+openButton.addEventListener('click', () => {
+  slideMenu.style.left = '0';
+});
+
+closeButton.addEventListener('click', () => {
+  slideMenu.style.left = '-300px';
+});
+function hideButton() {
+  const openButton = document.querySelector('.open-button');
+  openButton.style.display = 'none';
+
+  const closeButton = document.querySelector('.close-button');
+  closeButton.addEventListener('click', showButton);
+}
+
+function showButton() {
+  const openButton = document.querySelector('.open-button');
+  openButton.style.display = 'block';
+}
+
 </script>

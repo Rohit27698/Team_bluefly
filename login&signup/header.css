@@ -83,6 +83,7 @@
     margin: 0 auto; /* center the logo horizontally */
 
   }
+  
 /* For screens smaller than 800px */
 @media screen and (max-width: 700px) {
     #menuheader {
@@ -90,7 +91,51 @@
     }
   }
   
-  @media screen and (min-width: 501px) {
+  @media screen and (min-width: 701px) {
+    .slide-menu{
+      display: none;
+      
+    }
+    #slide {
+    display: none;
+    }
+    
+
+  }
+  .slide-menu {
+    position: fixed;
+    top: 70px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    transition: left .5s ease-in-out;
+  }
+  
+  .slide-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+  }
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  
+  .open-button {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
   }
   
 
