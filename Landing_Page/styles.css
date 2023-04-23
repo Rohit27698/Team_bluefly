@@ -168,6 +168,12 @@ button{
 .bflogo{
     margin-left: 38%;
 }
+#para1:hover,#para2:hover,#para3:hover,#para4:hover,#para5:hover{
+    text-decoration: underline;
+}
+#img1:hover,#img2:hover,#img3:hover,#img4:hover,#img5:hover {
+    transform: scale(1.2);
+  }
 
 
 /* media query section starts from here */

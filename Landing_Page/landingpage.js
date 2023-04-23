@@ -44,7 +44,8 @@ function slidePic(){
         var obj = {
             img: document.getElementById("img1").src,
             para1: document.getElementById("para1").textContent,
-            para2: document.getElementById("para11").textContent
+            para2: document.getElementById("para11").textContent,
+            price: document.getElementById("price").textContent
         };
         console.log(obj);
         cartArr.push(obj);
@@ -58,7 +59,8 @@ function slidePic(){
         var obj = {
             img: document.getElementById("img2").src,
             para1: document.getElementById("para2").textContent,
-            para2: document.getElementById("para21").textContent
+            para2: document.getElementById("para21").textContent,
+            price: document.getElementById("price1").textContent
         };
         console.log(obj);
         cartArr.push(obj);
@@ -72,7 +74,8 @@ function slidePic(){
         var obj = {
             img: document.getElementById("img3").src,
             para1: document.getElementById("para3").textContent,
-            para2: document.getElementById("para31").textContent
+            para2: document.getElementById("para31").textContent,
+            price: document.getElementById("price2").textContent
         };
         console.log(obj);
         cartArr.push(obj);
@@ -86,7 +89,8 @@ function slidePic(){
         var obj = {
             img: document.getElementById("img4").src,
             para1: document.getElementById("para4").textContent,
-            para2: document.getElementById("para41").textContent
+            para2: document.getElementById("para41").textContent,
+            price: document.getElementById("price3").textContent
         };
         console.log(obj);
         cartArr.push(obj);
@@ -94,13 +98,14 @@ function slidePic(){
         localStorage.setItem("cart-list",JSON.stringify(cartArr));
     }
 
-
+ 
     function addToKart4(){
         var cartArr = JSON.parse(localStorage.getItem("cart-list")) || [];
         var obj = {
             img: document.getElementById("img5").src,
             para1: document.getElementById("para5").textContent,
-            para2: document.getElementById("para51").textContent
+            para2: document.getElementById("para51").textContent,
+            price: document.getElementById("price4").textContent
         };
         console.log(obj);
         cartArr.push(obj);
