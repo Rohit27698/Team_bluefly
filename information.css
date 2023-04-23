@@ -1,0 +1,432 @@
+#container {
+    display: flex;
+    width: 50%;
+    height: vh;
+}
+#head {
+    display: flex;
+    justify-content: space-between;
+}
+#parent{
+    display: flex;
+}
+#left{
+    width: 50%;
+    margin-left: 12%;
+    margin-right: -8%;
+}
+#price{
+    text-decoration: line-through;
+}
+#data{
+    width: 127%;
+}
+
+#imgLogo{
+    /* border: 1px solid black; */
+    width: 125%;
+    margin-bottom: 20px;
+    border-bottom: 2px;
+}
+
+#left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+}
+
+#right-side {
+    /* display: flex; */
+    margin-left: -25px;
+    width: 41%;
+    padding: 20px;
+    /* border: 1px solid green; */
+    background-color: #fafafa;
+}
+
+select:nth-child(2){
+    height: 80px;
+}
+
+#image{
+    margin-top: 30px;
+    margin-left: -60px;
+}
+
+h2,
+h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.2857142857em;
+    line-height: 1.3em;
+    font-weight: 350;
+}
+
+h2 h4 {
+    margin-top: 5px;
+}
+
+h4 {
+    font-size: small;
+    display: inline;
+}
+
+form select {
+    display: block;
+    margin: 10px;
+}
+
+.fullWidth {
+    display: block;
+    width: 98.4%;
+    height: 40px;
+}
+
+#country {
+    display: block;
+    margin-left: -0px;
+    width: 100%;
+}
+
+form {
+    gap: 10px;
+}
+
+#state {
+    display: inline;
+}
+
+#name input {
+    width: 50%;
+    height: 40px;
+}
+
+#name {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#check-box {
+    width: 18px;
+    height: 18px;
+}
+
+#bottomGap {
+    margin-bottom: 10px;
+}
+
+.incLen {
+    height: 40px;
+    width: 30.5%;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+#botLen {
+    display: flex;
+    justify-content: space-between;
+}
+
+#button {
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    height: 60px;
+    width: 180px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#apply{
+        background-color: black;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        height: 50px;
+        width: 90px;
+        border-radius: 5px;
+        /* margin-bottom: 20px; */
+}
+
+#line{
+    width: 10px;
+}
+
+#promo{
+    height: 44px;
+    width: 50%;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+#cheKmail {
+    margin-top: 10px;
+    margin-right: -0px;
+}
+
+
+/* cart page css */
+
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Style the main content area */
+main {
+    padding: 20px;
+}
+
+/* Style the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style the table footer */
+table tfoot tr:first-child {
+    font-weight: bold;
+}
+
+/* Style the checkout button */
+a {
+    /* background-color: #333; */
+    color: black;
+    display: block;
+    /* margin-top: 20px; */
+    /* padding: 10px; */
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+}
+
+a:hover {
+    background-color: #666;
+}
+
+.logo {
+    width: 132px;
+}
+
+img:nth-child(1) {
+    border-radius: 5px;
+}
+
+#logos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* margin-top: 30px; */
+}
+
+h5 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.infoImg{
+    width: 80px;
+}
+.infoInline{
+    margin-top: 5px;
+    width: 80%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+#total1{
+    margin-top: 20px;
+}
+#total_items{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 421px) and (max-width: 720px) {
+    #left-side {
+        width: 50%;
+        padding: 20px;
+    }
+    #right-side {
+        /* width: 100%; */
+        display: none;
+    }
+    #image{
+        width: 150px;
+    }
+
+    h5 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: -10px;
+        width: 80px;
+    }
+
+    #parent {
+        width: 100%;
+        display: flex;
+        background-color: green;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-side {
+        width: 100%;
+    }
+
+    #button {
+        width: 120px;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 420px) {
+    #left-side {
+        padding: 20px;
+    }
+    #left{
+        width: 100%;
+    }
+    #data{
+        width: 160%;
+    }
+    #image{
+        /* margin: auto; */
+        width: 150px;
+    }
+    h5 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: -10px;
+        width: 80px;
+    }
+
+    img {
+        width: 172px;
+    }
+
+    #zip {
+        margin-top: 10px;
+    }
+
+    #parent {
+        /* border: 2px solid red; */
+        width: 80%;
+        margin-left: 5px;
+        height: 100vh;
+        /* background-color: red; */
+    }
+
+    .fullWidth {
+        width: 80%;
+        height: 30px;
+    }
+
+    .incLen {
+        height: 30px;
+        width: 38%;
+    }
+
+    #name {
+        padding: 0 0 0 0;
+        width: 80%
+    }
+
+    #botLen {
+        width: 82%;
+    }
+
+    #botLen h4 {
+        margin-top: 4px;
+    }
+
+    #zip {
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin-bottom: -5px;
+    }
+
+    #head {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -10px;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-side {
+        width: 100%;
+    }
+
+    #right-side {
+        /* width: 100%; */
+        display: none;
+    }
+    #hrLine{
+        display: none;
+    }
+
+    #button {
+        width: 90px;
+        height: 30px;
+    }
+
+    #btnPay {
+        padding: -5px;
+        /* margin: 55px; */
+    }
+}
