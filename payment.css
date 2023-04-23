@@ -65,6 +65,12 @@
 }
 
 @media only screen and (min-width: 421px) and (max-width: 720px) {
+    /* #parent{
+        border: 2px solid red;
+    } */
+    #child{
+        width: 80%;
+    }
     #container {
         display: flex;
         flex-direction: column;
@@ -89,7 +95,14 @@
 }
 
 @media only screen and (min-width: 0px) and (max-width: 420px) {
-
+    #parent{
+        /* border: 2px solid green; */
+        width: 80%;
+    }
+    .inpData, .inpData2{
+        width: 80%;
+        margin: 10px;
+    }
     /* #head{
                 display: flex;
                 flex-direction: column;

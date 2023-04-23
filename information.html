@@ -6,65 +6,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information</title>
-    <link rel="stylesheet" href="information.css" />
+    <link rel="stylesheet" href="information.css">
 </head>
 
 <body>
-    <form id="form">
-        <div>
-            <img id="image" src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?233294"
-                alt="BLUFY.COM">
-        </div>
-        <div id="container">
-            <div id="left-side">
-                <div>
-                    <div id="head">
-                        <h2>Contact Information</h2>
-                        <h4>Already have an account? <span>Log in</span></h4>
-                    </div>
-                    <input type="text" id="email" class="fullWidth" placeholder="Email">
-                    <div id="cheKmail">
-                        <input type="checkbox" id="check-box">
-                        <h4>Email me with news and offers</h4>
-                    </div>
-                    <!-- <form> -->
-                    <h2>Shipping Address</h2>
-                    <select name="Country/region" id="country" class="fullWidth">
-                        <option value="india">India</option>
-                        <option value="nepal">Nepal</option>
-                        <option value="russia">Russia</option>
-                        <option value="japan">Japan</option>
-                    </select>
-                    <div id="name">
-                        <input type="text" placeholder="First name" id="fname">
-                        <input type="text" placeholder="Last name" id="lname">
-                    </div>
-                    <input type="text" placeholder="Address" class="fullWidth" id="bottomGap">
-                    <input type="text" placeholder="Apartment, suit, etc.(optional)" class="fullWidth" id="apartment">
-                    <input type="text" placeholder="City" class="incLen" id="city">
-                    <select name="State" class="incLen" id="state">
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                    </select>
-                    <input type="number" placeholder="ZIP code" class="incLen" id="zip">
-                    <input type="number" placeholder="Phone" class="fullWidth" id="bottomGap">
-                    <!-- </form> -->
-                    <div id="botLen">
-                        <!-- <span><i class="arrow left"></i></span> -->
-                        <h4><span><i class="arrow left"></i></span> Return to cart</h4>
-                        <!-- <a href="Payment.html"> -->
-                        <input type="submit" id="button">
-                        <!-- </a> -->
-                        <!-- <button type="submit"><a href="Payment.html">Continue</a></button> -->
-                        <!-- <input type="submit" > -->
+    <div id="parent">
+        <div id="left">
+            <div>
+                <img id="image"
+                    src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?233294"
+                    alt="BLUFY.COM">
+            </div>
+            <form id="form">
+                <div id="container">
+                    <div id="left-side">
+                        <div id="imgLogo">
+                            <h5>Express checkout</h5>
+                            <div id="logos">
+                                <img class="logo"
+                                    src="https://a.storyblok.com/f/162198/1024x301/0f094bf122/shop-pay.png"
+                                    alt="shop-payLogo">
+                                <img class="logo"
+                                    src="https://woocommerce.com/wp-content/uploads/2022/08/PayPal-button.png"
+                                    alt="paypallogo">
+                                <img class="logo"
+                                    src="https://corefy.com/docs/integration/payment-methods/images/buy-buttons-black-small.png"
+                                    alt="Gpay">
+                            </div>
+                        </div>
+                        <div id="data">
+                            <hr vertical="true">
+                            <div id="head">
+                                <h2>Contact Information</h2>
+                                <h4>Already have an account? <span>Log in</span></h4>
+                            </div>
+                            <input type="text" id="email" class="fullWidth" placeholder="Email">
+                            <div id="cheKmail">
+                                <input type="checkbox" id="check-box">
+                                <h4>Email me with news and offers</h4>
+                            </div>
+                            <!-- <form> -->
+                            <h2>Shipping Address</h2>
+                            <select name="Country/region" id="country" class="fullWidth">
+                                <option value="india">India</option>
+                                <option value="nepal">Nepal</option>
+                                <option value="russia">Russia</option>
+                                <option value="japan">Japan</option>
+                            </select>
+                            <div id="name">
+                                <input type="text" placeholder="First name" id="fname">
+                                <input type="text" placeholder="Last name" id="lname">
+                            </div>
+                            <input type="text" placeholder="Address" class="fullWidth" id="bottomGap">
+                            <input type="text" placeholder="Apartment, suit, etc.(optional)" class="fullWidth"
+                                id="apartment">
+                            <input type="text" placeholder="City" class="incLen" id="city">
+                            <select name="State" class="incLen" id="state">
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            </select>
+                            <input type="number" placeholder="ZIP code" class="incLen" id="zip">
+                            <input type="number" placeholder="Phone" class="fullWidth" id="bottomGap">
+                            <!-- </form> -->
+                            <div id="botLen">
+                                <!-- <span><i class="arrow left"></i></span> -->
+                                <h4><span><i class="arrow left"></i></span> Return to cart</h4>
+                                <!-- <a href="Payment.html"> -->
+                                <input type="submit" id="button">
+                                <!-- </a> -->
+                                <!-- <button type="submit"><a href="Payment.html">Continue</a></button> -->
+                                <!-- <input type="submit" > -->
 
-                        <!-- <button>Continue to shopping</button> -->
+                                <!-- <button>Continue to shopping</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr vertical="true" id="hrLine">
+        <div id="right-side">
+            <h2>Shopping Cart</h2>
+            <div id="body">
+                <div id="products">
+                    <table>
+                        <tbody id="tblast">
+
+                        </tbody>
+                    </table>
+                </div>
+                <hr vertical="true" class="line">
+                <div id="total_price">
+                    <div id="Offer">
+                        <div>
+                            <!-- <p>Apply Promo Code</p> -->
+                            <input type="text" id="promo" placeholder="Gift card or discount code">
+                            <button id="apply">Apply</button>
+                        </div> <br>
+                    </div>
+                    <hr vertical="true" class="line">
+                    <div id="total_items">
+                        <!-- <h3>Total Price - ₹ <span id="total1"></span></h3> -->
+                        <h3>Total</h3>
+                        <span id="total1"></span>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
 </body>
 
 </html>
 <script src="information.js"></script>
+<!-- <div id="right-side">
+        

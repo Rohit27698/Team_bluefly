@@ -9,12 +9,16 @@ var dispData = JSON.parse(localStorage.getItem("information")) || [];
             alert("Fill all the Fields!");
         }
         else if (otp == 1234) {
-            alert("Payment Successfull.")
+            // alert("Payment Successfull.")
+            done();
         } else {
             alert("Invalid Details!");
         }
     }
 
+    function done(){
+        window.location.href="paymentSuccesFull.html";
+    }
     function data() {
         event.preventDefault();
         var credit = document.querySelector("#creditRadio").value;
@@ -33,7 +37,7 @@ var dispData = JSON.parse(localStorage.getItem("information")) || [];
     }
 
     function dataBase(dispData) {
-        var tb = document.querySelector("#tb1")
+        var tb = document.querySelector("#tb1");
         tb.textContent = "";
         for (var i = 0; i < 1; i++) {
             var elem = dispData[dispData.length - 1];
