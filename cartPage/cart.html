@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <style>
+      #Logo {
+      display: block;
+      text-align: center;
+      }
+      #Logo > img{
+        height: 40px;
+      }
+      #parent > div{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 70%;
+        display: flex;
+        
+        column-gap: 25%;
+      }
+      #parent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20%;
+      }
+      #child-Price{
+        display: flex;
+        justify-content: space-around;
+      }
+      #child-Price + p{
+        display: flex;
+        justify-content: center;
+      }
+      #checkOut{
+        display: block;
+        text-align: center;
+      }
+      button:hover{
+        height: 15%;
+      }
+      #checkOut > button:hover{
+          color: aliceblue;
+          background-color: black;
+      }
+      #parahover:hover{
+        text-decoration: underline;
+      }
+      #imghover:hover{
+        width: 25%;
+      }
+    </style>
+</head>
+
+  
+<body>
+  <div id="Logo">
+    <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1613183141" alt="bflogo">
+    <hr>
+    <br>
+    <h1 id="head">Your Cart</h1>
+  </div>
+
+  <div id="parent">
+
+  </div>
+  <div id="child-Price">
+    <h3>SUBTOTAL</h3>
+    <h3 id="subtotal"></h3>
+  </div>
+  <p>Shipping, taxes, and discounts codes calculated at checkout.</p>
+  <div id="checkOut">
+  <button>CHECK OUT</button>
+  </div>
+     
+                     
+</body>
+</html>
+<script>
+
+  var cart = JSON.parse(localStorage.getItem("cart-list")) || [];
+  if(cart.length>0){
+    displayCart();
+    cartTotal();
+  }
+
+  else{
+    var head = document.getElementById("head").textContent = "Your Cart is Empty!"
+    document.getElementById("child-Price").style.display = "none";
+    document.getElementById("checkOut").style.display = "none";
+    document.querySelector("p").style.display = "none";
+  }
+ 
+  function displayCart(){
+    
+    cart.map(function(elem,ind){
+
+    var div = document.createElement("div");
+    var image = document.createElement("img");
+    image.setAttribute("src",elem.img);
+    image.setAttribute("id","imghover");
+
+    var divOfPara = document.createElement("div");
+    var para1 = document.createElement("p");
+    para1.textContent = elem.para1;
+    para1.setAttribute("id","parahover")
+    var para2 = document.createElement("p");
+    para2.textContent = "$" + elem.price;
+
+    var button = document.createElement("button");
+    button.textContent = "Remove from cart";
+    button.addEventListener("click",function(){
+      deleteItem(elem,ind);
+    });
+    divOfPara.append(para1,para2,button);
+    div.append(image,divOfPara);
+
+    document.getElementById("parent").append(div);
+    });
+  }
+
+  function deleteItem(elem,ind){
+    cart.splice(ind,1);
+    localStorage.setItem("cart-list",JSON.stringify(cart));
+    window.location.reload();
+    displayCart();
+  }
+
+  function cartTotal(){
+    var total = cart.reduce(function(acc,curr){
+                    return acc+Number(curr.price);
+        },0);
+    
+    document.getElementById("subtotal").append("$ "+total);
+  }
+</script>
