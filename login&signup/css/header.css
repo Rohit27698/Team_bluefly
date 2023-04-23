@@ -1,0 +1,154 @@
+#headerIcons img{
+   height: 3vh;
+   margin-left: 20px;
+   
+}
+
+#menuheader{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+#menuheader>ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    list-style: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+
+   
+    
+}
+#menuheader>ul>li>a{
+    text-decoration: none;
+    color: #322d2d;
+}
+.navcon{
+    
+    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 91px;
+    transition: all;
+    transition-delay: 1s;
+    margin: auto;
+    font-family: Futura, sans-serif;
+    font-size: 12px;
+    line-height: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    z-index: 0;
+    padding: 10px;
+  
+    box-sizing: border-box;
+}
+.navcon>div>h2{
+    font-size: 12px;
+   
+}
+.navcon>div>img{
+    width: 100%;
+}
+
+.shoes:hover .navcon{
+  
+   display: flex;
+   column-gap: 30px;
+   justify-content: center;
+   z-index: 0;
+   font-style: underline;
+  
+}
+   a:hover .navcon{
+    color: black;
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+    z-index: 0;
+    font-style: underline;
+   
+ }
+ #logoheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+  }
+  
+  .logo {
+    display: flex; 
+    justify-content: center;
+    margin-left: 30%;
+
+  }
+  #blackslider{
+    text-align: center;
+color: white;
+background-color: black;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 10px;
+}
+  
+/* For screens smaller than 800px */
+@media screen and (max-width: 700px) {
+    #menuheader {
+      display: none; 
+    }
+  }
+  
+  @media screen and (min-width: 701px) {
+    .slide-menu{
+      display: none;
+      
+    }
+    #slide {
+    display: none;
+    }
+    
+
+  }
+  .slide-menu {
+    position: fixed;
+    top: 70px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    transition: left .5s ease-in-out;
+  }
+  
+  .slide-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+  }
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  
+  .open-button {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+

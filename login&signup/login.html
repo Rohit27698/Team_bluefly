@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Bluefly</title>
+      <link rel="stylesheet" href="css/header.css" />
+      <link rel="stylesheet" href="css/footer.css" />
+      <style>
+         #error{
+         color: red;
+         }
+         * {
+         box-sizing: border-box;
+         }
+         .container {
+         background-color: white;
+         margin: 20px auto;
+         max-width: 500px;
+         padding: 20px;
+         text-align: center;
+         }
+         form {
+         display: grid;
+         grid-template-columns: 1fr;
+         gap: 20px;
+         }
+         label {
+         text-align: left;
+         }
+         input[type="email"],
+         input[type="password"] {
+         border: 1px solid #ddd;
+         border-radius: 3px;
+         font-size: 16px;
+         padding: 12px;
+         width: 100%;
+         }
+         button {
+         background-color: black;
+         border: none;
+         color: rgb(249, 246, 246);
+         padding: 10px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin-top: 10px;
+         cursor: pointer;
+         }
+         .password-field {
+         position:relative;
+         }
+         .forgot-password {
+         position: absolute;
+         top: -80%;
+         right: 0;
+         transform: translateY(-50%);
+         font-size: 14px;
+         color: #999;
+         text-decoration: none;
+         }
+         .forgot-password:hover {
+         color: #333;
+         }
+         p{
+         font-style: normal;
+         }
+         body{
+         padding: 0px;
+         margin: 0px;
+         box-sizing: border-box;
+         text-align: center;
+         }
+      </style>
+   </head>
+   <body>
+      <header style="padding-top: 20px;">
+         <div style="display: flex; justify-content: center; justify-content: space-around;"  >
+            <div id="logoheader" >
+               <div>
+                  <div id="slide">
+                     <div class="slide-menu">
+                        <a href="#" class="close-button">×</a>
+                        <a href="#">CLOTHING</a>
+                        <a href="#">SHOES</a>
+                        <a href="#">HANDBAGS & ACCESSORIES</a>
+                        <a href="#">DESIGNERS</a>
+                        <a href="#">SUNGLASSES</a>
+                        <a href="#">JEWLRY & WATCHES</a>
+                        <a href="#">UNDER $50</a>
+                        <a href="#">CLEARANCE</a>
+                     </div>
+                     <button class="open-button" onclick="hideButton()"><img src="img/menu.png" alt=""></button>
+                  </div>
+               </div>
+               <a href="index.html">
+               <img class="logo"
+                  style="height: 5vh;"
+                  src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
+                  alt="bluefly"
+                  />
+               </a>
+               <div id="headerIcons">
+                  <img src="img/ser.png" />
+                  
+                  <a href="login.html"><img src="img/user.png" alt="" /></a>
+                  <a href="Payment.html"><img id="cartButton" src="img/bag.png" alt="" /></a>
+               </div>
+            </div>
+         </div>
+         <div id="menuheader">
+            <ul>
+               <li>
+                  <a href="#">
+                     CLOTHING 
+                     <div class="navcon">
+                        <div>
+                           <img
+                              src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/women.jpg?v=1598516476"
+                              alt=""
+                              />
+                           <p>DRESS</p>
+                           <p>UP TO 60% off</p>
+                        </div>
+                        <div>
+                           <h2> CLOTHING</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                        <div>
+                           <h2>HANDBAGS</h2>
+                           <p>Burberry</p>
+                           <p>Chloe</p>
+                           <p>Christian louboutin</p>
+                           <p>Dolce & Gabana</p>
+                           <p>Giuseppe Zanotti</p>
+                           <p>Gucci</p>
+                           <p>Jimmy Choo</p>
+                           <p>Manolo Blahnik</p>
+                           <p>Parada</p>
+                           <p>Saint Laurent</p>
+                        </div>
+                        <div>
+                           <h2>SHOES</h2>
+                           <p>Shop ALL</p>
+                           <p>Drivers, Loafers & Slip-ons</p>
+                           <p>Oxford & Derby shoes</p>
+                           <p>Sandals & Flips Flops</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                        </div>
+                        <div>
+                           <h2>JWELLRY</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+               <li>
+                  <a href="shoes.html" class="shoes"
+                     >
+                     SHOES
+                     <div class="navcon">
+                        <div>
+                           <img
+                              src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/women_shoes.jpg?v=1598516516"
+                              alt=""
+                              />
+                           <p>Sandals</p>
+                           <p>UP TO 70% off</p>
+                        </div>
+                        <div>
+                           <h2>WOMEN'S SHOES</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                        <div>
+                           <h2>WOMEN'S DESINERS</h2>
+                           <p>Burberry</p>
+                           <p>Chloe</p>
+                           <p>Christian louboutin</p>
+                           <p>Dolce & Gabana</p>
+                           <p>Giuseppe Zanotti</p>
+                           <p>Gucci</p>
+                           <p>Jimmy Choo</p>
+                           <p>Manolo Blahnik</p>
+                           <p>Parada</p>
+                           <p>Saint Laurent</p>
+                        </div>
+                        <div>
+                           <h2>MEN'S SHOES</h2>
+                           <p>Shop ALL</p>
+                           <p>Drivers, Loafers & Slip-ons</p>
+                           <p>Oxford & Derby shoes</p>
+                           <p>Sandals & Flips Flops</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                        </div>
+                        <div>
+                           <h2>WMEN'S DESINERS</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                        <div>
+                           <img
+                              src="data:image/webp;base64,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"
+                              alt="shoes"/>
+                           <p>DRIVERS, LOAFERS & SLIP-ONS</p>
+                           <p>UP TO 60% OFF</p>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+               <li>
+                  <a href="handbagandacc.html" class="shoes"
+                     >
+                     HANDBAGS & ACCESSORIES
+                     <div class="navcon">
+                        <div>
+                           <img
+                              src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR-AgdsVv1HHSCCVClYV8dqFjbAPgID-Rk7vWCQ_1e_i6x6wW0M"
+                              alt="hand bag"/>
+                           <p>SATCHELS</p>
+                           <p>UP TO 60% off</p>
+                        </div>
+                        <div>
+                           <h2>ALL HANDBAGS</h2>
+                           <p>Shop ALL</p>
+                           <p>Backpacks</p>
+                           <p>Bucket bags</p>
+                           <p>Clutches</p>
+                           <p>Crossbody Bags</p>
+                           <p>Hobo Bags</p>
+                           <p>Satchels</p>
+                           <p>Shoulder bag</p>
+                           <p>Tote Bags</p>
+                           <p>Wallets & Cardholders</p>
+                        </div>
+                        <div>
+                           <h2>TOP DESINERS</h2>
+                           <p>Balenciaga</p>
+                           <p>Bottega Veneta</p>
+                           <p>Burberry</p>
+                           <p>Celine</p>
+                           <p>Chole</p>
+                           <p>Gucci</p>
+                           <p>Jimmy Choo</p>
+                           <p>Manolo Blahnik</p>
+                           <p>Parada</p>
+                           <p>Saint Laurent</p>
+                           <p>Stella McCarteny</p>
+                           <p>Valentino</p>
+                           <p>Valentino By Mario</p>
+                           <p>Parada</p>
+                        </div>
+                        <div>
+                           <h2>PRE-OWNED</h2>
+                           <p>Shop ALL</p>
+                           <p>Bucket bags</p>
+                           <p>Cluches</p>
+                           <p>Crossbody Bags</p>
+                           <p>tata bags</p>
+                           <p>Wallets & Cardholders</p>
+                        </div>
+                        <div>
+                           <h2>ACCESSORIES</h2>
+                           <p>Shop ALL</p>
+                           <p>BootBelts</p>
+                           <p>Espadrilles</p>
+                           <p>Hats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Gloves</p>
+                           <p>Scarves</p>
+                           <p>Wedges</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Sunglass</p>
+                        </div>
+                        <div>
+                           <h2>ACCESSORIES</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+               <li>
+                  <a href="" class="shoes"
+                     >
+                     DESIGNERS
+                     <div class="navcon">
+                        <div>
+                           <img
+                              src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/handbag.jpg?v=1598514963"
+                              alt=""
+                              />
+                           <p>GUCCI</p>
+                           <p>UP TO 70% off</p>
+                        </div>
+                        <div>
+                           <h2>FEATURED</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                        <div>
+                           <h2>DESINERS</h2>
+                           <p>Burberry</p>
+                           <p>Chloe</p>
+                           <p>Christian louboutin</p>
+                           <p>Dolce & Gabana</p>
+                           <p>Giuseppe Zanotti</p>
+                           <p>Gucci</p>
+                           <p>Jimmy Choo</p>
+                           <p>Manolo Blahnik</p>
+                           <p>Parada</p>
+                           <p>Saint Laurent</p>
+                        </div>
+                        <div style="letter-spacing: 15px">
+                           <h2>BY A-Z</h2>
+                           <p>A B C D</p>
+                           <p>E F G H</p>
+                           <p>I J K L</p>
+                           <p>M N O P</p>
+                           <p>Q R S T</p>
+                           <p>U V W X</p>
+                           <p>Y Z</p>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+               <li>
+                  <a href="sunglasses.html" class="shoes"
+                     >
+                     SUNGLASSES
+                     <div class="navcon">
+                        <div>
+                           <img
+                              src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/sunglasses_df9c0648-8d79-459a-ad8d-a7c1869f40db.jpg?v=1598516553"
+                              alt=""
+                              />
+                           <p>SUNGLASSES</p>
+                           <p>UP TO 70% off</p>
+                        </div>
+                        <div>
+                           <h2>WOMEN'S SUNGLASSES</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                           <p>Burberry</p>
+                           <p>Chloe</p>
+                           <p>Christian louboutin</p>
+                           <p>Dolce & Gabana</p>
+                           <p>Giuseppe Zanotti</p>
+                           <p>Gucci</p>
+                           <p>Jimmy Choo</p>
+                           <p>Manolo Blahnik</p>
+                        </div>
+                        <div>
+                           <h2>MEN'S SUNGLASSES</h2>
+                           <p>Shop ALL</p>
+                           <p>Drivers, Loafers & Slip-ons</p>
+                           <p>Oxford & Derby shoes</p>
+                           <p>Sandals & Flips Flops</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <h2>WMEN'S DESINERS</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+               <li>
+                  <a href="watches.html" class="shoes"
+                     >
+                     JEWLERY & WATCHES
+                     <div class="navcon">
+                        <div>
+                           <img
+                              src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/watch.jpg?v=1598517674"
+                              alt=""
+                              />
+                           <p>WATCHES</p>
+                           <p>UP TO 70% off</p>
+                        </div>
+                        <div>
+                           <h2>JWELLERY</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                        <div>
+                           <h2>TOP</h2>
+                           <p>Burberry</p>
+                           <p>Chloe</p>
+                           <p>Christian louboutin</p>
+                           <p>Dolce & Gabana</p>
+                           <p>Giuseppe Zanotti</p>
+                           <p>Gucci</p>
+                           <p>Jimmy Choo</p>
+                           <p>Manolo Blahnik</p>
+                           <p>Parada</p>
+                           <p>Saint Laurent</p>
+                        </div>
+                        <div>
+                           <h2>DESIGNERS</h2>
+                           <p>Shop ALL</p>
+                           <p>Drivers, Loafers & Slip-ons</p>
+                           <p>Oxford & Derby shoes</p>
+                           <p>Sandals & Flips Flops</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                        </div>
+                        <div>
+                           <h2>ARRIVALS</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+               <li>
+                  <a href="under50.html" class="shoes"
+                     >
+                     UNDER $50
+                     <div class="navcon">
+                        <div>
+                           <h2>SHOP BY PRIZE POINT</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                        <div>
+                           <h2>SHOP BY CATOGARY</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                        <div>
+                           <p>DRIVERS, LOAFERS & SLIP-ONS</p>
+                           <p>UP TO 60% OFF</p>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+               <li>
+                  <a href="" class="shoes"
+                     style="color: #ec7d7d;">
+                     CLEARANCE
+                     <div class="navcon">
+                        <div>
+                           <img
+                              src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/clearance_8fa5acf3-7405-41aa-8c98-b0891649c9ab.jpg?v=1598516564"
+                              alt=""
+                              />
+                           <p >CLEARENCE</p>
+                           <p>UP TO 70%-90% off</p>
+                        </div>
+                        <div>
+                           <h2>WOMEN'S</h2>
+                           <p>Burberry</p>
+                           <p>Chloe</p>
+                           <p>Christian louboutin</p>
+                           <p>Dolce & Gabana</p>
+                           <p>Giuseppe Zanotti</p>
+                           <p>Gucci</p>
+                           <p>Jimmy Choo</p>
+                           <p>Manolo Blahnik</p>
+                           <p>Parada</p>
+                           <p>Saint Laurent</p>
+                           <h2>MEN'S SHOES</h2>
+                           <p>Shop ALL</p>
+                           <p>Drivers, Loafers & Slip-ons</p>
+                           <p>Oxford & Derby shoes</p>
+                           <p>Sandals & Flips Flops</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                        </div>
+                        <div>
+                           <h2>MEN'S</h2>
+                           <p>Shop ALL</p>
+                           <p>Boots</p>
+                           <p>Espadrilles</p>
+                           <p>Flats</p>
+                           <p>Mules & slides</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                           <p>Oxfords & Loafers</p>
+                           <p>Pumps & Heels</p>
+                           <p>Slippers</p>
+                           <p>Sneakers</p>
+                           <p>Wedges</p>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </header>
+      <div id="blackslider">
+         <p class="slidePara">WELCOME TO BLUEFLY: Luxury brands at discounted price</p>
+         <p class="slidePara">FREE SHIPPING FOR ORDERS OVER $99</p>
+         <p class="slidePara">TAKE AN EXTRA 15% OFF SELECT DESIGNER SHOE STYLES</p>
+      </div>
+      <div class="container" >
+         <h1 style="margin-top: -8px; margin-bottom: 70px;">LOGIN</h1>
+         <ul id="error"></ul>
+         <form>
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">PASSWORD</label>
+            <div class="password-field">
+               <input type="password" id="password" name="password" required>
+               <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit">SIGN IN</button>
+            <button class="CREATEb" style="background-color: white;"> <a href="signup.html" style="color: black; text-decoration: none;">Create account</a> </button>
+         </form>
+      </div>
+      <footer>
+         <div>
+            <p>ABOUT US</p>
+            <div>
+               <div>
+                  <p>Contact Us</p>
+                  <p>Frequently Asked Questions</p>
+                  <p>Shipping & Returns</p>
+                  <p>Pre-Owned Guide</p>
+               </div>
+               <div>
+                  <p>Sell on Bluefly</p>
+                  <p>Privacy Policy</p>
+                  <p>Terms & Conditions</p>
+                  <p>Do not sell my personal information</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <p>SIGN UP AND SAVE</p>
+            <p>Subscribe to get exclusive offers on designer brands</p>
+         </div>
+      </footer>
+      <div>
+         <img style="width: 230px;"
+            src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Untitled_2_.png_5_x104@2x.png?v=1620852820"
+            alt=""
+            />
+         <p>
+            © 2023 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS
+            RESERVED.
+         </p>
+      </div>
+   </body>
+   <script>
+      document.querySelector("form").addEventListener("submit",login)
+      
+         var loginArr=JSON.parse(localStorage.getItem("account-data"))||[];
+       
+         
+         function login(event){
+           event.preventDefault();
+           var email=document.querySelector("#email").value
+           var password=document.querySelector("#password").value
+            
+             if(loginArr.length>0){
+                 for(i=0;i<loginArr.length;i++){
+                 console.log(loginArr[i].email,email,loginArr[i].password,password)
+                 if(loginArr[i].email==email && loginArr[i].password==password){
+                     alert("Login Successfully");
+                     window.location.href="index.html"
+                     break;
+                 }else{
+                     if((loginArr.length-1)==i){
+                         document.querySelector("#error").textContent=" * Incorrect email or password."
+                     }
+                 }
+             }
+             }else{
+               document.querySelector("#error").textContent=" * Incorrect email or password."
+             }
+      
+         }
+   </script>
+   <script src="javascripts/beautify.js"></script>
+</html>

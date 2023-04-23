@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #blackslider{
+        text-align: center;
+    color: white;
+    background-color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+<div id="blackslider"><p class="slidePara">WELCOME TO BLUEFLY: Luxury brands at discounted price</p>
+    <p class="slidePara">FREE SHIPPING FOR ORDERS OVER $99</p>
+    <p class="slidePara">TAKE AN EXTRA 15% OFF SELECT DESIGNER SHOE STYLES</p>
+</div>
+</body>
+<script>
+    var slideInd = 0;
+slideP();
+function slideP(){
+    var i;
+    var x = document.querySelectorAll(".slidePara");
+    console.log(x);
+    for(i = 0; i<x.length; i++){
+        x[i].style.display = "none";
+    }
+    slideInd++;
+    if(slideInd>x.length){
+        slideInd = 1;
+    }
+    x[slideInd-1].style.display = "block";
+    setTimeout(slideP,2000);
+}
+</script>
+</html>
